@@ -1,0 +1,11 @@
+.menu {
+  font-size: 100px;
+}
+.menu > a {
+  text-decoration: none;
+  color: black;
+}
+
+.time {
+  display: none;
+}
