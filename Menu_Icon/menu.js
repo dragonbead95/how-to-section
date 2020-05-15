@@ -14,5 +14,5 @@ function menu__toggle() {
     flag = true;
   }
 }
-ham__icon.style.transition = "0.5s";
+
 menu__icon.addEventListener("click", menu__toggle);
