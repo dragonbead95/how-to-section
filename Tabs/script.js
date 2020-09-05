@@ -1,5 +1,6 @@
-function openCity(cityName) {
-  let i, tabcontent, tablinks;
+const tablinks = document.querySelectorAll(".tablinks");
+function openCity(event, cityName) {
+  let i, tabcontent;
 
   //tabcontent 박스들을 전부 제거
   tabcontent = document.querySelectorAll(".tabcontent");
@@ -7,15 +8,22 @@ function openCity(cityName) {
     tabcontent[i].style.display = "none";
   }
 
+  //active class 제거
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
   // 클릭한 도시의 tabcontent의 display를 block으로 설정
   city = document.querySelector("#" + cityName);
   city.style.display = "block";
+  event.currentTarget.classList.add("active");
 }
-
-const tablinks = document.querySelectorAll(".tablinks");
-
 tablinks.forEach((item) => {
-  item.addEventListener("click", function () {
-    openCity(item.textContent);
-  });
+  item.addEventListener(
+    "click",
+    function (event) {
+      openCity(event, item.textContent);
+    },
+    false
+  );
 });

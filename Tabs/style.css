@@ -18,6 +18,9 @@
 .tab button:hover {
   background-color: #ccc;
 }
+.tab button.active {
+  background-color: #ccc;
+}
 
 .tabcontent {
   display: none;
