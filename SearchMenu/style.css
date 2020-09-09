@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+.left {
+  flex: 35%;
+  width: 360px;
+  float: left;
+}
+.left-title {
+  background: #bbbbbb;
+  margin: 0;
+  padding: 15px 10px 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+#mySearch {
+  width: 100%;
+  font-size: 1.5rem;
+  border: 1px solid #ddd;
+  font-weight: 400;
+  line-height: 23px;
+  color: black;
+}
+
+#myMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #bbbbbb;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+#myMenu li a:hover {
+  background: #eee;
+}
+.right {
+  flex: 65%;
+  padding: 15px;
+  background: #ccc;
+}
