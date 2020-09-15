@@ -17,6 +17,10 @@ body {
   padding-top: 20px;
 }
 
+.sidenav {
+  right: 0;
+}
+
 .sidenav a {
   text-decoration: none;
   display: block;
