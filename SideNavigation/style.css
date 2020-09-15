@@ -1,0 +1,55 @@
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% full height*/
+  width: 0; /* 0 width - change this with javascript*/
+  /*width: 200px;*/ /* The example below shows how to create a side navigation menu that is always shown (fixed): */
+  position: fixed; /* stay in place */
+  z-index: 1; /* stay on top*/
+  top: 0;
+  left: 0;
+  /*right: 0; The example below shows how to create a right-sided navigation menu:*/
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidenav {
+}
+
+/* The navigation menu links*/
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+  /*margin-left : 200px*/ /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
