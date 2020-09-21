@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--The slide right overlay-->
+    <div id="Rightnav" class="overlay">
+      <!-- Button to close the loverlay navigation-->
+      <a href="#" class="right_closebtn">&times;</a>
+
+      <!--Overlay content-->
+      <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <!--The slide down overlay-->
+    <div id="Downnav" class="overlay">
+      <!-- Button to close the loverlay navigation-->
+      <a href="#" class="down_closebtn">&times;</a>
+
+      <!--Overlay content-->
+      <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <!--The show overlay-->
+    <div id="Shownav" class="overlay">
+      <!-- Button to close the loverlay navigation-->
+      <a href="#" class="show_closebtn">&times;</a>
+
+      <!--Overlay content-->
+      <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <!--Use any element to open/show the overlay navigation menu-->
+    <span class="slideRight">slide Right</span>
+    <span class="slideDown">slide Down</span>
+    <span class="show">Show (No animation)</span>
+
+    <script>
+      const Rightnav = document.querySelector("#Rightnav");
+      const Downnav = document.querySelector("#Downnav");
+      const Shownav = document.querySelector("#Shownav");
+      const slideRight = document.querySelector(".slideRight");
+      const slideDown = document.querySelector(".slideDown");
+      const show = document.querySelector(".show");
+      const right_closebtn = document.querySelector(".right_closebtn");
+      const down_closebtn = document.querySelector(".down_closebtn");
+      const show_closebtn = document.querySelector(".show_closebtn");
+
+      function openNav(nav, direction) {
+        if (direction === "right") {
+          nav.style.width = "100%";
+        } else if (direction === "down") {
+          nav.style.height = "100%";
+        } else if (direction === "show") {
+          nav.style.display = "block";
+        } else {
+          return;
+        }
+      }
+      function closeNav(nav, direction) {
+        if (direction === "right") {
+          nav.style.width = "0%";
+        } else if (direction === "down") {
+          nav.style.height = "0%";
+        } else if (direction === "show") {
+          nav.style.display = "none";
+        }
+      }
+
+      slideRight.addEventListener("click", function () {
+        openNav(Rightnav, "right");
+      });
+      slideDown.addEventListener("click", function () {
+        openNav(Downnav, "down");
+      });
+      show.addEventListener("click", function () {
+        openNav(Shownav, "show");
+      });
+
+      right_closebtn.addEventListener("click", function () {
+        closeNav(Rightnav, "right");
+      });
+      down_closebtn.addEventListener("click", function () {
+        closeNav(Downnav, "down");
+      });
+      show_closebtn.addEventListener("click", function () {
+        closeNav(Shownav, "show");
+      });
+    </script>
+  </body>
+</html>
